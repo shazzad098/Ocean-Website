@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster&family=Macondo&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+    .navigation{
+        @apply lg:h-12 lg:flex lg:justify-between border border-black lg:mx-8 lg:items-center lg:rounded-full backdrop-blur-md bg-gray-100/50 dark:bg-gray-800/50 absolute top-8 left-0 right-0 px-8;
+    }
+    .btn{
+        @apply text-white bg-transparent border px-4 py-2 rounded-full hover:bg-slate-400 transition-all;
+    }
+    .nav{
+        @apply cursor-pointer font-bold hover:text-slate-500 transition-all;
+    }
+    .glass-card {
+        @apply bg-white/10 backdrop-blur-lg rounded-lg p-2 shadow-lg;
+    }
+    .image-text-container {
+        @apply flex items-start; /* Align items to the top */
+    }
+    .image-container {
+        @apply mr-4; /* Add margin between image and text */
+    }
+}
