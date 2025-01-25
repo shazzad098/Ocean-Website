@@ -214,47 +214,54 @@
 
     <section class="bg-gray-900">
         <div class="container mx-auto">
-            <div>
-
-                <div class="flex items-center justify-between w-full">
-                    <div class="w-full">
-                        <img src="images/shrimp.png" alt="Hairy Decapod Shrimp" class="w-[70%]">
+            <div class="flex flex-col lg:flex-row items-center justify-between w-full space-y-8 lg:space-y-0">
+                <!-- Image Section -->
+                <div class="w-full lg:w-1/2 flex justify-center lg:justify-start">
+                    <img src="images/shrimp.png" alt="Hairy Decapod Shrimp" class="w-[80%] sm:w-[70%]">
+                </div>
+                <!-- Text Content Section -->
+                <div class="w-full lg:w-1/2 lg:ml-4 text-center lg:text-left">
+                    <h1 class="text-3xl sm:text-4xl font-bold mb-4 text-white">'Hairy' Decapod Shrimp</h1>
+                    <p class="text-base sm:text-lg mb-2 text-white">3000 metres depth</p>
+                    
+                    <div class="mb-4">
+                        <p class="font-semibold text-cyan-300">Found</p>
+                        <p class="text-white">Near the hydrothermal vents of the Jøtul Vent Field</p>
                     </div>
-                    <div class="w-full ml-4">
-                        <h1 class="text-4xl font-bold mb-4 text-white">'Hairy' Decapod Shrimp</h1>
-                        <p class="text-lg mb-2 text-white">3000 metres depth</p>
-
-                        <div class="mb-4">
-                            <p class="font-semibold text-cyan-300">Found</p>
-                            <p class="text-white">Near the hydrothermal vents of the Jøtul Vent Field</p>
-                        </div>
-
-                        <div>
-                            <p class="font-semibold text-cyan-300">Interesting Fact</p>
-                            <p class="text-white">The "hairs" are actually bacteria that perform a remarkable chemical
-                                transformation, converting the vent's toxic hydrogen sulphide into energy.</p>
-                        </div>
+            
+                    <div>
+                        <p class="font-semibold text-cyan-300">Interesting Fact</p>
+                        <p class="text-white">
+                            The "hairs" are actually bacteria that perform a remarkable chemical transformation, converting the vent's
+                            toxic hydrogen sulphide into energy.
+                        </p>
                     </div>
                 </div>
             </div>
+            
 
             <div class="mt-16 relative">
+                <!-- Background Image -->
                 <img src="images/diver-3.webp" alt="Diver" class="w-full h-auto object-cover">
+                
+                <!-- Overlay -->
                 <div class="absolute inset-0 bg-black/50"></div>
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="text-left w-full px-4">
-                        <h2 class="text-6xl font-bold mb-8 txt text-white"><span
-                                class="text-cyan-300">JOIN</span><br>THE ODYSSEY</h2>
-                        <p class="text-lg mb-8 text-white">Whether you’re a scientist,<br> technologist, educator,
-                            policy-maker <br> or
-                            someone passionate about our <br> planet’s future, there’s a place for you in the ocean
-                            census. <br>
-                            Take a look at how you or your organisation could <br> get involved.</p>
-                        <button class="btn hover:bg-cyan-600 transition-all">Get
-                            Involved</button>
+                
+                <!-- Content Section -->
+                <div class="absolute inset-0 flex flex-col items-center justify-center lg:items-start">
+                    <div class="text-center lg:text-left w-full max-w-md px-4">
+                        <h2 class="lg:text-4xl sm:text-2xl font-bold mb-6 text-white">
+                            <span class="text-cyan-300">JOIN</span><br>THE ODYSSEY
+                        </h2>
+                        <p class="text-base sm:text-lg lg:mb-8 sm:mb-4 text-white">
+                            Whether you’re a scientist, technologist, educator, policy-maker, or someone passionate about our planet’s future, 
+                            there’s a place for you in the ocean census. Take a look at how you or your organisation could get involved.
+                        </p>
+                        <button class="btn hover:bg-cyan-600 transition-all">Get Involved</button>
                     </div>
                 </div>
             </div>
+            
         </div>
 
     </section>
@@ -289,24 +296,29 @@
 
     <section>
         <div class="relative">
+            <!-- Background Image -->
             <img src="images/diver-5.jpg" alt="Diver" class="w-full h-auto object-cover">
-            <div class="absolute inset-0 flex flex-col  justify-center px-4 w-[50%]">
-
-                <h2 class="text-6xl font-bold text-white mb-8">JOIN THE<br>MISSION</h2>
-                <p class="text-lg mb-12 text-white">Oceans Odyssey envisions a future where the <br> ocean is better
-                    understood and protected, <br> recognizing its importance to global health, <br> climate, and
-                    biodiversity.</p>
-
-
-                <div class="space-y-2 flex flex-col items-start">
-                    <a href="#" class="btn">Join Our Global Science Network</a>
-                    <a href="#" class="btn">Become Part of the Alliance</a>
-                    <a href="#" class="btn">Other Ways to Join the Mission</a>
+            
+            <!-- Content Container -->
+            <div class="absolute inset-0 flex flex-col items-center sm:items-start justify-center px-4 w-full sm:w-[50%] bg-black/50 sm:bg-transparent">
+                <h2 class="text-4xl sm:text-6xl font-bold text-white mb-6 sm:mb-8 text-center sm:text-left">JOIN THE<br>MISSION</h2>
+                <p class="text-base sm:text-lg mb-8 sm:mb-12 text-white text-center sm:text-left">
+                    Oceans Odyssey envisions a future where the <br class="hidden sm:block">
+                    ocean is better understood and protected, <br class="hidden sm:block">
+                    recognizing its importance to global health, <br class="hidden sm:block">
+                    climate, and biodiversity.
+                </p>
+    
+                <!-- Buttons -->
+                <div class="space-y-2 flex flex-col items-center sm:items-start">
+                    <a href="#" class="btn text-center w-full sm:w-auto">Join Our Global Science Network</a>
+                    <a href="#" class="btn text-center w-full sm:w-auto">Become Part of the Alliance</a>
+                    <a href="#" class="btn text-center w-full sm:w-auto">Other Ways to Join the Mission</a>
                 </div>
-
             </div>
         </div>
     </section>
+    
 
     <section>
         <div class="relative">
@@ -316,7 +328,7 @@
             <div class="absolute inset-0 z-10 container mx-auto px-4 py-16">
                 <h2 class="text-4xl font-bold text-center text-white mb-12">READ OUR LATEST EXPEDITION REPORTS</h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
                     <div class="glass-card">
                         <div class="image-text-container">
@@ -363,20 +375,20 @@
                     </div>
 
                     <div class="glass-card">
-                        <div class="image-text-container">
-                            <div class="image-container">
-                                <img src="images/jelly-fish.jpg" alt="OceanXplorer"
-                                    class="w-96 h-48 rounded-lg mb-4">
-                            </div>
-                            <div>
-                                <p class="font-bold mb-2 text-white">OCEANXPLORER:</p>
-                                <p class="mb-2 text-white">The company operates a state-of-the-art research vessel, the OceanXplorer, which
-                                    serves as a floating laboratory. It is equipped with advanced technology for
-                                    deep-sea exploration.</p>
-                                <a href="#" class="btn mt-4">Get Involved</a>
-                            </div>
+                        <div class="sm:flex sm:flex-col lg:flex lg:flex-row">
+                          <div class="sm:order-1 w-full sm:w-auto">
+                            <img src="images/jelly-fish.jpg" alt="OceanXplorer"
+                                 class="w-full sm:w-96 h-48 rounded-lg mb-4">
+                          </div>
+                          <div class="sm:order-2 w-full sm:w-auto">
+                            <p class="font-bold mb-2 text-white">OCEANXPLORER:</p>
+                            <p class="mb-2 text-white">The company operates a state-of-the-art research vessel, the OceanXplorer, which
+                              serves as a floating laboratory. It is equipped with advanced technology for
+                              deep-sea exploration.</p>
+                            <a href="#" class="btn mt-4">Get Involved</a>
+                          </div>
                         </div>
-                    </div>
+                      </div>
 
                 </div>
             </div>
