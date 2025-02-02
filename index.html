@@ -1,401 +1,598 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
     <!-- FOnt Awesome  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Ocean Website</title>
-</head>
+  </head>
 
-<body class="font-sans">
-
-    <header class="text-white fixed top-0 w-full z-10">
+  <body class="font-sans">
+    <header class="text-white fixed top-0 w-full z-10 bg-black">
         <div class="navigation relative flex items-center justify-between px-4 py-4 md:px-8 md:py-6 z-10">
-            <!-- Logo -->
-            <h3 class="text-white text-2xl lg:text-3xl font-bold lg:block hidden">Ocean Odyssey</h3>
-           
-             <div class="flex items-center">
-                   <!-- Menu Button (for small screens) -->
-                 <button class="lg:hidden btn mr-auto" aria-label="menu button">MENU</button>
-                
-                 <!-- Navigation Links (hidden on small screens, shown on medium and larger) -->
-                <ul class="hidden lg:flex gap-4 text-white">
-                    <li class="nav">ABOUT</li>
-                    <li class="nav">GET INVOLVED</li>
-                    <li class="nav">SCIENCE NETWORK</li>
-                    <li class="nav">DISCOVERIES</li>
-                    <li class="nav">NEWS & EVENTS</li>
-                 </ul>
-            
-                <!-- Buttons (hidden on small screens, shown on medium and larger) -->
-                <div class="hidden md:flex gap-2">
-                    <button class="btn">LET'S CONNECT</button>
-                </div>
-           </div>
-        </div>
-    </header>
-
-    <main class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/cover-img.jpg');"></div>
-        <div class="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
-
-        <div class="container mx-auto px-4 relative z-10 text-center text-white">
-            <h1 class="text-7xl font-bold mb-4 uppercase tracking-wide">
-                <span class="block">
-                    O
-                    <span class="inline-block relative -top-3 left-[-6px] ">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-[48px] h-[48px]">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M9.078 2.001A9.705 9.705 0 0 0 6 3.75c0 1.421.765 2.706 2 3.551m7.922-1.55a9.705 9.705 0 0 1 3-1.749c1.421 0 2.706.765 3.551 2m-6.293 8.249a9.703 9.703 0 0 1-1.52-2.845m12.114 3.481a9.704 9.704 0 0 1-2.845-1.52m-7.636 8.536a9.705 9.705 0 0 1-3.553-2c-1.421 0-2.706.765-3.55 2m6.291-2.166A9.703 9.703 0 0 0 3.75 20.25c0-1.421.765-2.706 2-3.551m7.921 1.55A9.703 9.703 0 0 1 21 19.087c0-1.421-.765-2.706-2-3.551M15 15a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                        </svg>
-                    </span>
-                    CEAN
-                </span>
-
-            </h1>
-            <h2 class="text-4xl font-semibold mb-8 tracking-wider">ODYSSEY</h2>
-            <p class="text-lg mb-12">We turn your dreams of underwater adventure into reality.</p>
-        </div>
-
-        <div
-            class="absolute bottom-6 left-6 z-10 w-96 bg-gray-900 bg-opacity-70 p-6 rounded-lg shadow-lg text-left text-white">
-            <h3 class="text-xl font-semibold mb-2">01.</h3>
-            <h3 class="text-xl font-semibold mb-2">Expert Guides</h3>
-            <p class="text-gray-300 text-sm mb-4">Our experienced team of marine biologists and certified divers ensure
-                an immersive and informative journey beneath the waves.</p>
-            <div class="absolute bottom-6 left-6 flex space-x-1">
-                <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-                <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-                <div class="w-2 h-2 bg-white rounded-full"></div>
+          <!-- Logo -->
+          <h3 class="text-white text-2xl lg:text-3xl font-bold lg:block hidden">
+            Ocean Odyssey
+          </h3>
+          <div class="flex items-center justify-end">
+            <!-- Menu Button (for small screens) -->
+            <button id="menu-button" class="lg:hidden btn ml-auto" aria-label="menu button">
+              MENU
+            </button>
+            <!-- Navigation Links (hidden on small screens, shown on medium and larger) -->
+            <ul id="nav-links" class="hidden lg:flex gap-4 text-white">
+              <li class="nav">ABOUT</li>
+              <li class="nav">GET INVOLVED</li>
+              <li class="nav">SCIENCE NETWORK</li>
+              <li class="nav">DISCOVERIES</li>
+              <li class="nav">NEWS & EVENTS</li>
+            </ul>
+            <!-- Buttons (hidden on small screens, shown on medium and larger) -->
+            <div class="hidden lg:flex gap-2">
+              <button class="btn">LET'S CONNECT</button>
+              <button class="btn">MENU</button>
             </div>
-            <div class="absolute bottom-6 right-6 flex items-center space-x-2">
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6 text-white">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                    </svg>
-                </button>
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6 text-white">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                    </svg>
-                </button>
-            </div>
+          </div>
         </div>
+      
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden bg-black text-white w-full absolute top-16 left-0 py-4 px-4 md:px-8">
+          <ul class="flex flex-col gap-4">
+            <li class="nav">ABOUT</li>
+            <li class="nav">GET INVOLVED</li>
+            <li class="nav">SCIENCE NETWORK</li>
+            <li class="nav">DISCOVERIES</li>
+            <li class="nav">NEWS & EVENTS</li>
+          </ul>
+        </div>
+      </header>
+    <main
+      class="relative h-screen flex items-center justify-center overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url('/cover-img.jpg')"
+      ></div>
+      <div class="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
 
-        <div class="absolute bottom-6 right-6 z-20 flex space-x-4 text-white">
-            <a href="#">
-                <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="#">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="#">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="#">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
+      <div class="container mx-auto px-4 relative z-10 text-center text-white">
+        <h1 class="text-7xl font-bold mb-4 uppercase tracking-wide">OCEAN</h1>
+        <h2 class="text-4xl font-semibold mb-8 tracking-wider">ODYSSEY</h2>
+        <p class="text-lg mb-12">
+          We turn your dreams of underwater adventure into reality.
+        </p>
+      </div>
+
+      <div
+        class="absolute bottom-6 left-6 z-10 w-96 bg-gray-900 bg-opacity-70 p-6 rounded-lg shadow-lg text-left text-white"
+      >
+        <h3 class="text-xl font-semibold mb-2">01.</h3>
+        <h3 class="text-xl font-semibold mb-2">Expert Guides</h3>
+        <p class="text-gray-300 text-sm mb-4">
+          Our experienced team of marine biologists and certified divers ensure
+          an immersive and informative journey beneath the waves.
+        </p>
+        <div class="absolute bottom-6 left-6 flex space-x-1">
+          <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+          <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+          <div class="w-2 h-2 bg-white rounded-full"></div>
         </div>
+        <div class="absolute bottom-6 right-6 flex items-center space-x-2">
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 text-white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 text-white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="absolute bottom-6 right-6 z-20 flex space-x-4 text-white">
+        <a href="#">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
     </main>
 
-    <section class="bg-gray-900 py-16 relative">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div class="relative text-white font-sans">
-                <span class="absolute text-teal-400 text-4xl font-bold -rotate-90 lg:left-[-9rem] lg:top-[6rem] tracking-wide">
-                    THE MISSION
-                </span>
+    <section class="bg-gray-900 py-8 sm:py-16 relative">
+      <div
+        class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 gap-8 items-center"
+      >
+        <!-- Left Column -->
+        <div class="relative text-white font-sans border">
+          <span
+            class="text-teal-400 text-3xl sm:text-4xl font-bold -rotate-90 lg:left-[-10rem] lg:top-[7.5rem] tracking-widest border"
+          >
+            THE MISSION
+          </span>
 
-                <h2 class="text-5xl font-bold mb-6 leading-tight uppercase">
-                    Only 10% of
-                    <span class="block text-5xl">ocean life</span>
-                    <span class="block text-2xl font-light uppercase mt-2 tracking-wide">
-                        is currently unknown
-                    </span>
-                </h2>
-            </div>
-            
-            <div class="text-gray-300">
-                <p class="mb-6">
-                    Our mission is to bring you closer to the wonders of the deep sea, offering thrilling and
-                    educational ocean exploration experiences for all skill levels.
-                </p>
-                <p class="mb-6">
-                    Whether you're seeking to discover vibrant coral reefs, encounter fascinating marine life, or dive
-                    into the mysteries of shipwrecks, Ocean Explorers delivers the ultimate aquatic journey. Guided by
-                    seasoned professionals, we provide top-tier safety, expertise, and sustainability to ensure that
-                    every dive is not only breathtaking but also environmentally responsible.
-                </p>
-                <button
-                    class="border border-teal-400 text-teal-400 px-6 py-3 rounded-full uppercase hover:bg-teal-400 hover:text-gray-900 focus:outline-none">
-                    Our Mission
-                </button>
-            </div>
+          <h2
+            class="text-4xl sm:text-6xl font-bold mb-4 leading-tight uppercase"
+          >
+            Only 10% of
+            <span class="block text-6xl sm:text-8xl leading-normal"
+              >ocean life</span
+            >
+            <span
+              class="block text-xl sm:text-3xl font-light uppercase mt-3 tracking-widest"
+            >
+              is currently unknown
+            </span>
+          </h2>
         </div>
+
+        <!-- Right Column -->
+        <div class="text-gray-300">
+          <p class="mb-4 sm:mb-6 text-base sm:text-lg">
+            Our mission is to bring you closer to the wonders of the deep sea,
+            offering thrilling and educational ocean exploration experiences for
+            all skill levels.
+          </p>
+          <p class="mb-4 sm:mb-6 text-base sm:text-lg">
+            Whether you're seeking to discover vibrant coral reefs, encounter
+            fascinating marine life, or dive into the mysteries of shipwrecks,
+            Ocean Explorers delivers the ultimate aquatic journey. Guided by
+            seasoned professionals, we provide top-tier safety, expertise, and
+            sustainability to ensure that every dive is not only breathtaking
+            but also environmentally responsible.
+          </p>
+          <button
+            class="border border-teal-400 text-teal-400 px-4 sm:px-6 py-2 sm:py-3 rounded-full uppercase text-sm sm:text-base hover:bg-teal-400 hover:text-gray-900 focus:outline-none"
+          >
+            Our Mission
+          </button>
+        </div>
+      </div>
     </section>
 
     <section class="bg-gray-800">
-        <div class="container mx-auto px-4">
-            <div class="lg:flex-row justify-between items-start mb-16">
-                <div class="text-white lg:w-full flex flex-col lg:flex-row">
-                    <div class="mb-8 lg:w-[50%] w-full lg:order-1 order-2">
-                        <img class="w-[10em] h-[10em]" src="/logo.png" alt="logo">
-                        <p class="text-lg">We are committed to protecting marine ecosystems through eco-friendly
-                            practices and educational programs.</p>
-                    </div>
-                    <div class="lg:w-[50%] w-full flex justify-center lg:justify-end lg:order-2 order-1">
-                        <img src="/jelly-fish.jpg" alt="jelly fish" class="w-full lg:w-[30em] h-[25em] object-contain">
-                    </div>
-                </div>
+      <div class="container mx-auto px-4">
+        <div class="lg:flex-row justify-between items-start mb-16">
+          <div class="text-white lg:w-full flex flex-col lg:flex-row">
+            <div class="mb-8 lg:w-[50%] w-full lg:order-1 order-2">
+              <img class="w-[10em] h-[10em]" src="/logo.png" alt="logo" />
+              <p class="text-lg">
+                We are committed to protecting marine ecosystems through
+                eco-friendly practices and educational programs.
+              </p>
+            </div>
+            <div
+              class="lg:w-[50%] w-full flex justify-center lg:justify-end lg:order-2 order-1"
+            >
+              <img
+                src="/jelly-fish.jpg"
+                alt="jelly fish"
+                class="w-full lg:w-[30em] h-[25em] object-contain"
+              />
+            </div>
+          </div>
 
-                <div class="mt-10">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-gray-900 rounded-lg p-4 flex items-start">
-                            <img src="/jelly-fish.jpg" alt="jelly fish"
-                                class="w-24 h-24 mr-4 object-cover rounded-md">
-                            <div>
-                                <h4 class="font-semibold text-white">Join Our Global Science Network</h4>
-                                <p class="text-gray-300 text-sm">Their goal is to support marine science, conservation,
-                                    and to inspire global change through</p>
-                            </div>
-                        </div>
-                        <div class="bg-gray-900 rounded-lg p-4 flex items-start">
-                            <img src="/fish.jpg" alt="fish" class="w-24 h-24 mr-4 object-cover rounded-md">
-                            <div>
-                                <h4 class="font-semibold text-white">Discover our latest species</h4>
-                                <p class="text-gray-300 text-sm">They use advanced technology and media to share their
-                                    findings with the world, often</p>
-                            </div>
-                        </div>
-                        <div class="bg-gray-900 rounded-lg p-4 flex items-start">
-                            <img src="/turtle.jpg" alt="Turtle" class="w-24 h-24 mr-4 object-cover rounded-md">
-                            <div>
-                                <h4 class="font-semibold text-white">Find out how you can get involved</h4>
-                                <p class="text-gray-300 text-sm">Their work spans marine research, scientific discovery,
-                                    and media outreach to make</p>
-                            </div>
-                        </div>
-                    </div>
+          <div class="mt-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="bg-gray-900 rounded-lg p-4 flex items-start">
+                <img
+                  src="/jelly-fish.jpg"
+                  alt="jelly fish"
+                  class="w-24 h-24 mr-4 object-cover rounded-md"
+                />
+                <div>
+                  <h4 class="font-semibold text-white">
+                    Join Our Global Science Network
+                  </h4>
+                  <p class="text-gray-300 text-sm">
+                    Their goal is to support marine science, conservation, and
+                    to inspire global change through
+                  </p>
                 </div>
+              </div>
+              <div class="bg-gray-900 rounded-lg p-4 flex items-start">
+                <img
+                  src="/fish.jpg"
+                  alt="fish"
+                  class="w-24 h-24 mr-4 object-cover rounded-md"
+                />
+                <div>
+                  <h4 class="font-semibold text-white">
+                    Discover our latest species
+                  </h4>
+                  <p class="text-gray-300 text-sm">
+                    They use advanced technology and media to share their
+                    findings with the world, often
+                  </p>
+                </div>
+              </div>
+              <div class="bg-gray-900 rounded-lg p-4 flex items-start">
+                <img
+                  src="/turtle.jpg"
+                  alt="Turtle"
+                  class="w-24 h-24 mr-4 object-cover rounded-md"
+                />
+                <div>
+                  <h4 class="font-semibold text-white">
+                    Find out how you can get involved
+                  </h4>
+                  <p class="text-gray-300 text-sm">
+                    Their work spans marine research, scientific discovery, and
+                    media outreach to make
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 items-center w-full h-auto bg-no-repeat bg-center bg-cover"
+          style="background-image: url('/diver-2.webp')"
+        >
+          <div
+            class="text-white text-center sm:text-left bg-gray-900/50 rounded-lg w-full px-6 py-8 sm:p-6"
+          >
+            <div
+              class="lg:flex sm:fle sm:flex-col items-center justify-center sm:justify-start mb-6"
+            >
+              <i
+                class="fa-regular fa-circle-play text-9xl sm:text-[5em] mr-3 cursor-pointer hover:text-cyan-500 transition-all sm:mb-2"
+              ></i>
+              <p class="text-sm sm:text-base sm:mt-2">
+                Watch Our Mission Video
+              </p>
+            </div>
+            <h2
+              class="font-bold uppercase text-3xl sm:text-5xl mt-4 mb-4 sm:mb-6 leading-tight"
+            >
+              A premier diving company
+              <span class="block"
+                >offering unforgettable underwater experiences.</span
+              >
+            </h2>
+
+            <p
+              class="text-base sm:text-lg text-gray-300 mb-4 sm:mb-8 leading-relaxed"
+            >
+              Whether you’re a seasoned diver or a beginner eager to discover
+              the wonders of the ocean, our expert instructors and
+              top-of-the-line equipment ensure every dive is safe, thrilling,
+              and educational.
+            </p>
+
+            <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
+              With locations at some of the world’s most beautiful coastal
+              spots, Ocean Divers invites you to uncover vibrant marine life and
+              breathtaking seascapes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-900">
+      <div class="container mx-auto">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between w-full space-y-8 lg:space-y-0"
+        >
+          <!-- Image Section -->
+          <div class="w-full lg:w-1/2 flex justify-center lg:justify-start">
+            <img
+              src="/shrimp.png"
+              alt="Hairy Decapod Shrimp"
+              class="w-[80%] sm:w-[70%]"
+            />
+          </div>
+          <!-- Text Content Section -->
+          <div class="w-full lg:w-1/2 lg:ml-4 text-center lg:text-left">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-4 text-white">
+              'Hairy' Decapod Shrimp
+            </h1>
+            <p class="text-base sm:text-lg mb-2 text-white">
+              3000 metres depth
+            </p>
+
+            <div class="mb-4">
+              <p class="font-semibold text-cyan-300">Found</p>
+              <p class="text-white">
+                Near the hydrothermal vents of the Jøtul Vent Field
+              </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 items-center w-full h-auto bg-no-repeat bg-center bg-cover"
-     style="background-image: url('/diver-2.webp');">
-  <div class="text-white text-center sm:text-left bg-gray-900/50  rounded-lg w-full px-6 py-8 sm:p-6">
+            <div>
+              <p class="font-semibold text-cyan-300">Interesting Fact</p>
+              <p class="text-white">
+                The "hairs" are actually bacteria that perform a remarkable
+                chemical transformation, converting the vent's toxic hydrogen
+                sulphide into energy.
+              </p>
+            </div>
+          </div>
+        </div>
 
-    <div class="lg:flex sm:fle sm:flex-col items-center justify-center sm:justify-start mb-6">
-        <i class="fa-regular fa-circle-play text-9xl sm:text-[5em] mr-3 cursor-pointer hover:text-cyan-500 transition-all sm:mb-2"></i>
-      <p class="text-sm sm:text-base sm:mt-2">Watch Our Mission Video</p>
-    </div>
-    <h2 class="font-bold uppercase text-3xl sm:text-5xl mt-4 mb-4 sm:mb-6 leading-tight">A premier diving company
-       <span class="block">offering unforgettable underwater experiences.</span></h2>
+        <div class="mt-16 relative">
+          <!-- Background Image -->
+          <img
+            src="/diver-3.webp"
+            alt="Diver"
+            class="w-full h-auto object-cover"
+          />
+
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-black/50"></div>
+
+          <!-- Content Section -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center lg:items-start"
+          >
+            <div class="text-center lg:text-left w-full max-w-md px-4">
+              <h2 class="lg:text-4xl sm:text-2xl font-bold mb-6 text-white">
+                <span class="text-cyan-300">JOIN</span><br />THE ODYSSEY
+              </h2>
+              <p class="text-base sm:text-lg lg:mb-8 sm:mb-4 text-white">
+                Whether you’re a scientist, technologist, educator,
+                policy-maker, or someone passionate about our planet’s future,
+                there’s a place for you in the ocean census. Take a look at how
+                you or your organisation could get involved.
+              </p>
+              <button class="btn hover:bg-cyan-600 transition-all">
+                Get Involved
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-900">
+      <div class="container mx-auto px-4 py-16">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl font-bold text-cyan-300 mb-4">
+            EXPEDITION SPOTLIGHT
+          </h2>
+          <h3 class="text-3xl font-semibold mb-8 text-white">
+            ON AN EXPEDITION
+          </h3>
+          <p class="text-lg leading-relaxed text-white">
+            Globally, thousands of taxonomists, biologists, data scientists,
+            technicians and curators are working in a diverse number of roles to
+            uncover the secrets of ocean life. The Ocean Census Science Network
+            is a global community passionate about driving our mission, helping
+            to coordinate opportunities, resources and collaborate. Individuals
+            and institutes are welcome to join us today.
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col sm:flex-row border border-neutral-500 rounded-lg w-full gap-4"
+        >
+          <!-- Image -->
+          <img
+            src="/diver-4.jpg"
+            alt="Ocean Explorer"
+            class="w-full sm:w-[45%] h-[20em] sm:h-[25em] rounded-lg shadow-lg object-cover"
+          />
+
+          <!-- Text Content -->
+          <div class="flex flex-col justify-center w-full sm:w-[50%]">
+            <h4 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+              OCEANXPLORER:
+            </h4>
+            <p class="text-base sm:text-lg leading-relaxed text-white">
+              The company operates a state-of-the-art research vessel, the
+              OceanXplorer, which serves as a floating laboratory. It is
+              equipped with cutting-edge technology for deep-sea exploration,
+              including submersibles, underwater drones, and a state-of-the-art
+              science lab.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="relative">
+        <!-- Background Image -->
+        <img
+          src="/diver-5.jpg"
+          alt="Diver"
+          class="w-full h-[30em] sm:h-[40em] object-cover"
+        />
+
+        <!-- Content Container -->
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center px-4 w-full sm:w-[50%] bg-black/50 sm:bg-transparent"
+        >
+          <!-- Heading -->
+          <h2
+            class="text-3xl sm:text-6xl font-bold text-white mb-4 sm:mb-8 text-center sm:text-left"
+          >
+            JOIN THE MISSION
+          </h2>
+
+          <!-- Paragraph -->
+          <p
+            class="text-sm sm:text-lg mb-6 sm:mb-12 text-white text-center sm:text-left"
+          >
+            Oceans Odyssey envisions a future where the ocean is better
+            understood and protected, recognizing its importance to global
+            health, climate, and biodiversity.
+          </p>
+
+          <!-- Buttons -->
+          <div class="space-y-2 flex flex-col items-center sm:items-start">
+            <a
+              href="#"
+              class="btn text-center w-full sm:w-auto text-sm sm:text-base"
+              >Join Our Global Science Network</a
+            >
+            <a
+              href="#"
+              class="btn text-center w-full sm:w-auto text-sm sm:text-base"
+              >Become Part of the Alliance</a
+            >
+            <a
+              href="#"
+              class="btn text-center w-full sm:w-auto text-sm sm:text-base"
+              >Other Ways to Join the Mission</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+        <div class="relative">
+          <!-- Background Image -->
+          <img
+            src="/jelly-fish-large.jpg"
+            alt="Jellyfish Background"
+            class="w-full h-[30em] sm:h-[40em] object-cover"
+          />
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-black/60"></div>
+          <!-- Content Container -->
+          <div class="absolute inset-0 z-10 container mx-auto px-4 py-16">
+            <!-- Heading -->
+            <h2 class="text-4xl font-bold text-center text-white mb-12">
+              READ OUR LATEST EXPEDITION REPORTS
+            </h2>
       
-    <p class="text-base sm:text-lg text-gray-300 mb-4 sm:mb-8 leading-relaxed">
-      Whether you’re a seasoned diver or a beginner eager to discover the wonders of the ocean, our expert instructors
-      and top-of-the-line equipment ensure every dive is safe, thrilling, and educational.
-    </p>
-     
-    <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
-        With locations at some of the world’s most beautiful coastal spots, Ocean Divers invites you to
-      uncover vibrant marine life and breathtaking seascapes.
-    </p>
-  </div>
-</div>
-
+            <!-- Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-black lg:bg-transparent">
+              <!-- Card 1 -->
+              <div class="glass-card flex flex-col lg:block">
+                <div class="image-text-container">
+                  <!-- Image -->
+                  <div class="image-container">
+                    <img
+                      src="/sea-horse.jpg"
+                      alt="Partnership"
+                      class="w-full h-48 rounded-lg mb-4 object-cover"
+                    />
+                  </div>
+                  <!-- Text -->
+                  <div>
+                    <p class="font-bold mb-2 text-white">PARTNERSHIPS:</p>
+                    <p class="mb-2 text-white">
+                      OceanX works closely with scientific institutions like the Woods Hole
+                      Oceanographic Institution and the Schmidt Ocean Institute to foster
+                      collaboration and advance ocean research.
+                    </p>
+                    <a href="#" class="btn mt-4">Get Involved</a>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Card 2 -->
+              <div class="glass-card flex flex-col lg:block">
+                <div class="image-text-container">
+                  <!-- Image -->
+                  <div class="image-container">
+                    <img
+                      src="/turtle.jpg"
+                      alt="Scientific Research"
+                      class="w-full h-48 rounded-lg mb-4 object-cover"
+                    />
+                  </div>
+                  <!-- Text -->
+                  <div>
+                    <p class="font-bold mb-2 text-white">SCIENTIFIC RESEARCH:</p>
+                    <p class="mb-2 text-white">
+                      The company is involved in cutting-edge research, discovering new marine
+                      species, studying coral reefs, and exploring the deep sea.
+                    </p>
+                    <a href="#" class="btn mt-4">Get Involved</a>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Card 3 -->
+              <div class="glass-card flex flex-col lg:block">
+                <div class="image-text-container">
+                  <!-- Image -->
+                  <div class="image-container">
+                    <img
+                      src="/octopus.jpg"
+                      alt="Education and Outreach"
+                      class="w-full h-48 rounded-lg mb-4 object-cover"
+                    />
+                  </div>
+                  <!-- Text -->
+                  <div>
+                    <p class="font-bold mb-2 text-white">EDUCATION AND OUTREACH:</p>
+                    <p class="mb-2 text-white">
+                      OceanX is committed to educating the public about the ocean through
+                      outreach programs, scientific documentaries, and educational resources.
+                    </p>
+                    <a href="#" class="btn mt-4">Get Involved</a>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Card 4 -->
+              <div class="glass-card flex flex-col lg:flex-row gap-4">
+                <div class="w-full lg:w-1/2">
+                  <img
+                    src="/jelly-fish.jpg"
+                    alt="OceanXplorer"
+                    class="w-full h-48 rounded-lg mb-4 object-cover"
+                  />
+                </div>
+                <div class="w-full lg:w-1/2">
+                  <p class="font-bold mb-2 text-white">OCEANXPLORER:</p>
+                  <p class="mb-2 text-white">
+                    The company operates a state-of-the-art research vessel, the OceanXplorer,
+                    which serves as a floating laboratory. It is equipped with advanced
+                    technology for deep-sea exploration.
+                  </p>
+                  <a href="#" class="btn mt-4">Get Involved</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-
-    <section class="bg-gray-900">
-        <div class="container mx-auto">
-            <div class="flex flex-col lg:flex-row items-center justify-between w-full space-y-8 lg:space-y-0">
-                <!-- Image Section -->
-                <div class="w-full lg:w-1/2 flex justify-center lg:justify-start">
-                    <img src="/shrimp.png" alt="Hairy Decapod Shrimp" class="w-[80%] sm:w-[70%]">
-                </div>
-                <!-- Text Content Section -->
-                <div class="w-full lg:w-1/2 lg:ml-4 text-center lg:text-left">
-                    <h1 class="text-3xl sm:text-4xl font-bold mb-4 text-white">'Hairy' Decapod Shrimp</h1>
-                    <p class="text-base sm:text-lg mb-2 text-white">3000 metres depth</p>
-                    
-                    <div class="mb-4">
-                        <p class="font-semibold text-cyan-300">Found</p>
-                        <p class="text-white">Near the hydrothermal vents of the Jøtul Vent Field</p>
-                    </div>
-            
-                    <div>
-                        <p class="font-semibold text-cyan-300">Interesting Fact</p>
-                        <p class="text-white">
-                            The "hairs" are actually bacteria that perform a remarkable chemical transformation, converting the vent's
-                            toxic hydrogen sulphide into energy.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-
-            <div class="mt-16 relative">
-                <!-- Background Image -->
-                <img src="/diver-3.webp" alt="Diver" class="w-full h-auto object-cover">
-                
-                <!-- Overlay -->
-                <div class="absolute inset-0 bg-black/50"></div>
-                
-                <!-- Content Section -->
-                <div class="absolute inset-0 flex flex-col items-center justify-center lg:items-start">
-                    <div class="text-center lg:text-left w-full max-w-md px-4">
-                        <h2 class="lg:text-4xl sm:text-2xl font-bold mb-6 text-white">
-                            <span class="text-cyan-300">JOIN</span><br>THE ODYSSEY
-                        </h2>
-                        <p class="text-base sm:text-lg lg:mb-8 sm:mb-4 text-white">
-                            Whether you’re a scientist, technologist, educator, policy-maker, or someone passionate about our planet’s future, 
-                            there’s a place for you in the ocean census. Take a look at how you or your organisation could get involved.
-                        </p>
-                        <button class="btn hover:bg-cyan-600 transition-all">Get Involved</button>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-
-    </section>
-
-    <section class="bg-gray-900">
-        <div class="container mx-auto px-4 py-16">
-
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold text-cyan-300 mb-4">EXPEDITION SPOTLIGHT</h2>
-                <h3 class="text-3xl font-semibold mb-8 text-white">ON AN EXPEDITION</h3>
-                <p class="text-lg leading-relaxed text-white">Globally, thousands of taxonomists, biologists, data
-                    scientists, technicians and curators are working in a diverse number of roles to uncover the secrets
-                    of ocean life. The Ocean Census Science Network is a global community passionate about driving our
-                    mission, helping to coordinate opportunities, resources and collaborate. Individuals and institutes
-                    are welcome to join us today.</p>
-            </div>
-
-            <div class="flex border border-neutral-500 rounded-lg w-[100%] gap-4">
-                <img src="/diver-4.jpg" alt="Ocean Explorer" class="w-[45%] h-[25em] rounded-lg shadow-lg">
-
-                <div class="flex flex-col justify-center w-[50%]"> <!-- Added for vertical centering -->
-                    <h4 class="text-3xl font-bold text-white mb-4">OCEANXPLORER:</h4>
-                    <p class="text-lg leading-relaxed text-white">The company operates a state-of-the-art research
-                        vessel, the OceanXplorer, which serves as a floating laboratory. It is equipped with
-                        cutting-edge technology for deep-sea exploration, including submersibles, underwater drones, and
-                        a state-of-the-art science lab.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section>
-        <div class="relative">
-            <!-- Background Image -->
-            <img src="/diver-5.jpg" alt="Diver" class="w-full h-auto object-cover">
-            
-            <!-- Content Container -->
-            <div class="absolute inset-0 flex flex-col items-center sm:items-start justify-center px-4 w-full sm:w-[50%] bg-black/50 sm:bg-transparent">
-                <h2 class="text-4xl sm:text-6xl font-bold text-white mb-6 sm:mb-8 text-center sm:text-left">JOIN THE<br>MISSION</h2>
-                <p class="text-base sm:text-lg mb-8 sm:mb-12 text-white text-center sm:text-left">
-                    Oceans Odyssey envisions a future where the <br class="hidden sm:block">
-                    ocean is better understood and protected, <br class="hidden sm:block">
-                    recognizing its importance to global health, <br class="hidden sm:block">
-                    climate, and biodiversity.
-                </p>
+      </section>
     
-                <!-- Buttons -->
-                <div class="space-y-2 flex flex-col items-center sm:items-start">
-                    <a href="#" class="btn text-center w-full sm:w-auto">Join Our Global Science Network</a>
-                    <a href="#" class="btn text-center w-full sm:w-auto">Become Part of the Alliance</a>
-                    <a href="#" class="btn text-center w-full sm:w-auto">Other Ways to Join the Mission</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-    <section>
-        <div class="relative">
-            <img src="/jelly-fish-large.jpg" alt="Jellyfish Background" class="w-full h-auto object-cover">
-            <div class="absolute inset-0 bg-black/60"></div>
-
-            <div class="absolute inset-0 z-10 container mx-auto px-4 py-16">
-                <h2 class="text-4xl font-bold text-center text-white mb-12">READ OUR LATEST EXPEDITION REPORTS</h2>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-
-                    <div class="glass-card">
-                        <div class="image-text-container">
-                            <div class="image-container">
-                                <img src="/sea-horse.jpg" alt="Partnership" class="w-96 h-48 rounded-lg mb-4 ">
-                            </div>
-                            <div>
-                                <p class="font-bold mb-2 text-white">PARTNERSHIPS:</p>
-                                <p class="mb-2 text-white">OceanX works closely with scientific institutions like the Woods Hole Oceanographic
-                                    Institution and the Schmidt Ocean Institute to foster collaboration and advance
-                                    ocean research.</p> <a href="#" class="btn mt-4">Get Involved</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="glass-card">
-                        <div class="image-text-container">
-                            <div class="image-container">
-                                <img src="/turtle.jpg" alt="Scientific Research"
-                                    class="w-96 h-48 rounded-lg mb-4">
-                            </div>
-                            <div>
-                                <p class="font-bold mb-2 text-white">SCIENTIFIC RESEARCH:</p>
-                                <p class="mb-2 text-white">The company is involved in cutting-edge research, discovering new marine species,
-                                    studying coral reefs, and exploring the deep sea.</p>
-                                <a href="#" class="btn mt-4">Get Involved</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="glass-card">
-                        <div class="image-text-container">
-                            <div class="image-container">
-                                <img src="/octopus.jpg" alt="Education and Outreach"
-                                    class="w-96 h-48 rounded-lg mb-4">
-                            </div>
-                            <div>
-                                <p class="font-bold mb-2 text-white">EDUCATION AND OUTREACH:</p>
-                                <p class="mb-2 text-white">OceanX is committed to educating the public about the ocean through outreach
-                                    programs, scientific documentaries, and educational resources.</p>
-                                <a href="#" class="btn mt-4">Get Involved</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="glass-card">
-                        <div class="sm:flex sm:flex-col lg:flex lg:flex-row">
-                          <div class="sm:order-1 w-full sm:w-auto">
-                            <img src="/jelly-fish.jpg" alt="OceanXplorer"
-                                 class="w-full sm:w-96 h-48 rounded-lg mb-4">
-                          </div>
-                          <div class="sm:order-2 w-full sm:w-auto">
-                            <p class="font-bold mb-2 text-white">OCEANXPLORER:</p>
-                            <p class="mb-2 text-white">The company operates a state-of-the-art research vessel, the OceanXplorer, which
-                              serves as a floating laboratory. It is equipped with advanced technology for
-                              deep-sea exploration.</p>
-                            <a href="#" class="btn mt-4">Get Involved</a>
-                          </div>
-                        </div>
-                      </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-</body>
-
-
+      <script src="script.js"></script>
+  </body>
 </html>
